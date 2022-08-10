@@ -68,3 +68,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### after cloning project
+in frontend folder run:
+### `npm install`
+create .env.local and add 
+REACT_APP_UNSPLASH_KEY=
+followed by key (no quotes or parens)
+
+to run application:
+### `npm start`
+
+### Virtual Env
+install in api folder
+python3 -m venv .venv 
+
+To activate the venv enter the command into the command prompt/terminal:
+
+    Windows:
+        .venv\Scripts\activate.bat
+    Unix/MacOS:
+        source .venv/bin/activate
+
+###VSCODE
+slect .venv enterpreter
+Enter pyt to a Python interpreter
