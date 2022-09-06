@@ -28,6 +28,7 @@ app.config["DEBUG"] = DEBUG
 
 @app.route("/new-image")
 def new_image():
+    '''Retrieve new image from Unsplash API'''
     word = request.args.get("query")
     headers = {
         "Accept-Version": "v1",
