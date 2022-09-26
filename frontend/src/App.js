@@ -13,15 +13,30 @@ const App = () => {
   const [word, setWord] = useState('');
   const [images, setImages] = useState([]);
 
-  const getSavedImages = async () => {
-    try {
-      const res = await axios.get(`${API_URL}/images`);
-      setImages(res.data || []);
-    } catch (error) {
-      console.log(error);
+  // Non-working course code
+  // const getSavedImages = async () => {
+  //   try {
+  //     const res = await axios.get(`${API_URL}/images`);
+  //     setImages(res.data || []);
+  //     console.log(res.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  // useEffect(() => getSavedImages(), []);
+
+  // updated code from console error
+  useEffect(() => {
+    async function getSavedImages() {
+      try {
+        const res = await axios.get(`${API_URL}/images`);
+        setImages(res.data || []);
+      } catch (error) {
+        console.log(error);
+      }
     }
-  };
-  useEffect(() => getSavedImages(), []);
+    getSavedImages();
+  }, []);
 
   const handleSearchSubmit = async (e) => {
     e.preventDefault();
