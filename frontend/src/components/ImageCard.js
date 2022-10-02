@@ -11,7 +11,7 @@ const ImageCard = ({ image, deleteImage, saveImage }) => {
       <Card.Img variant="top" src={image.urls.small} />
       <Card.Body>
         <Card.Title>{image.title?.toUpperCase()}</Card.Title>
-        <Card.Subtitle>{imageLocation}</Card.Subtitle>
+        <Card.Subtitle className="text-muted">{imageLocation}</Card.Subtitle>
         <Card.Text>{image.description || image.alt_description}</Card.Text>
         <Button variant="primary" onClick={() => deleteImage(image.id)}>
           Delete
